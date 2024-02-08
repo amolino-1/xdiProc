@@ -4,18 +4,16 @@ import pandas as pd
 
 data = []
 
-with open("/home/andrew/Pria/MEX1_29686_processed.xdi", "r") as file:
+with open("MEX1_29687_processed.xdi", "r", encoding="utf8") as file:
     for line in file:
         if not line.startswith("#"):
             row = line.split()
             if row:
                 data.append(row)
 
-# Convert list to DataFrame
 columns = ["energy", "bragg", "count_time", "i0", "i1", "i2"]
-df = pd.DataFrame(data, columns=columns).astype(float)  # Convert strings to float
+df = pd.DataFrame(data, columns=columns).astype(float)
 
-# Drop the columns bragg, count_time, and i0
 df = df.drop(columns=["bragg", "count_time", "i0"])
 
 print(df.head())
