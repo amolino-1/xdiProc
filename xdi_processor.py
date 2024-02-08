@@ -7,9 +7,9 @@ data = []
 with open("/home/andrew/Pria/MEX1_29686_processed.xdi", "r") as file:
     for line in file:
         if not line.startswith("#"):
-            parts = line.split()
-            if parts:
-                data.append(parts)
+            row = line.split()
+            if row:
+                data.append(row)
 
 # Convert list to DataFrame
 columns = ["energy", "bragg", "count_time", "i0", "i1", "i2"]
