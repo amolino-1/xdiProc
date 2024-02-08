@@ -24,8 +24,7 @@ df["ln_i1_i2"] = np.log(df["i1"] / df["i2"])
 print(df.head())
 print("\n")
 
-
 plt.plot(df["energy"], df["ln_i1_i2"])
-plt.xlabel("Energy")
+plt.xlabel("Energy (eV)")
 plt.ylabel("ln(i1/i2)")
 plt.show()
