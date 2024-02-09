@@ -35,4 +35,5 @@ for filename in os.listdir("."):
 plt.xlabel("Energy (eV)")
 plt.ylabel("ln(i1/i2)")
 plt.legend()
-plt.show()
+plt.tight_layout()
+plt.savefig("xdi_processor_loop.png")
